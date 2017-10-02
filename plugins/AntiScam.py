@@ -44,7 +44,7 @@ class AddrDetection(Plugin):
     btc_prog = re.compile(r'([13][a-km-zA-HJ-NP-Z1-9]{25,34})')
 
     #List of users with information
-    UserList = print(scBot.api_call("users.list"))
+    UserList = scBot.api_call("users.list")
 
     #Mapping between names and user IDs
     UserNameID_mapping = { i['name']:i['id'] for i in UserList['members']}
